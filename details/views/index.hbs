@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body {
+      background: linear-gradient(90deg, rgb(252, 89, 89), rgb(87, 87, 244));
+    }
+
+    #box input {
+      font-family: "lucida-sans-serif", sans-serif;
+      outline: 0;
+      background: #db9ef9;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: black;
+    }
+
+    #box button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4d4d4d;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+
+    #box {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 30px 20px 40px 30px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    #create{
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="create">
+  <h1>Create User</h1></div>
+  <div id="box">
+    <form action="/users" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Enter your name" required>
+      <br><br>
+      <input type="number" name="age" placeholder="Enter your age" required>
+      <br><br>
+      <label for="pdf"><b>Upload your resume:</b></label><br><br>
+      <input type="file" name="pdf" accept=".pdf" required>
+      <br><br>
+      <button type="submit" onsubmit="/users">Submit</button>
+
+    </form>
+  </div>
+</body>
+
+</html>
